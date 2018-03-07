@@ -26,3 +26,13 @@ def module_parent(level=1, caller_file=None):
         pass
 
     return '.'.join(parent.parts[len(top.parts):])
+
+
+def disable_requests_warnings():
+    """
+    disable requests warnings when verify=False option.
+    """
+    import requests
+    from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
