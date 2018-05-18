@@ -13,6 +13,7 @@ temp
 # Python
 *.pyc
 *.pyo
+*.eggs
 *.egg-info/
 dist/
 
@@ -53,6 +54,10 @@ Podfile.lock
 
 # JetBrains
 .idea
+
+# virtualenv
+venv
+.venv
 
 # if required
 # data/*
