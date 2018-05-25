@@ -9,7 +9,6 @@ except ImportError:
     from .mainutils import module_parent, disable_requests_warnings
 
 
-
 class MainutilsTest(unittest.TestCase):
     def test_module_import(self):
         global __package__
