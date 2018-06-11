@@ -32,7 +32,12 @@ def disable_requests_warnings():
     """
     disable requests warnings when verify=False option.
     """
-    import requests
-    from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+    try:
+        import urllib3
+        from urllib3.exceptions import InsecureRequestWarning
+        urllib3.disable_warnings(InsecureRequestWarning)
+    except ImportError:
+        import requests
+        from requests.packages.urllib3.exceptions \
+            import InsecureRequestWarning
+        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)

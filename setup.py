@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='mainutils',
-    version='0.2',
+    version='0.2.1',
     description='utilities for __main__',
     author='ytyng',
     author_email='ytyng@live.jp',
